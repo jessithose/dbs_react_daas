@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+ * digiBank design tokens (Tailwind v4 CSS-based theme).
+ * digiBank 设计令牌（Tailwind v4 基于 CSS 的主题）。
+ *
+ * The colour system is deliberately DIFFERENT from the stock emerald demo:
+ * a deep indigo/violet "wealth & trust" palette with an amber-gold accent, so
+ * the shell reads as its own brand. Tokens below generate utilities like
+ * `bg-brand-600`, `text-accent-400`, etc.
+ * 色彩系统刻意与默认的 emerald 演示做出区别：采用深靛蓝/紫罗兰的“财富与信任”
+ * 配色 + 琥珀金强调色，让壳应用拥有自己的品牌感。下面的令牌会生成诸如
+ * `bg-brand-600`、`text-accent-400` 等工具类。
+ * ------------------------------------------------------------------------- */
+@theme {
+  --color-brand-50:  #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1d1b4d;
+
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+
+  --color-nav-800: #1e1b4b;
+  --color-nav-900: #141238;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif;
+}
+
+/* Small helper for numeric tabular alignment in balances. */
+/* 用于余额中数字等宽对齐的小工具。 */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

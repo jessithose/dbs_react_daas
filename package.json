@@ -1,0 +1,23 @@
+{
+  "name": "dbs_react_daas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "digiBank-style MFE demo — React 18 + Module Federation 2.0 + Rsbuild/Rspack + React Router v7 + Zustand + Tailwind CSS + TypeScript. Host owns routing; per-feature remote MFEs (auth, dashboard, payments, digiWealth, accounts) are mounted at runtime.",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n host,auth,dash,pay,wlth,accts -c cyan,magenta,green,yellow,blue,red \"npm run dev -w @daas/host\" \"npm run dev -w @daas/remote-auth\" \"npm run dev -w @daas/remote-dashboard\" \"npm run dev -w @daas/remote-payments\" \"npm run dev -w @daas/remote-wealth\" \"npm run dev -w @daas/remote-accounts\"",
+    "dev:core": "concurrently -n host,auth,dash,pay,wlth -c cyan,magenta,green,yellow,blue \"npm run dev -w @daas/host\" \"npm run dev -w @daas/remote-auth\" \"npm run dev -w @daas/remote-dashboard\" \"npm run dev -w @daas/remote-payments\" \"npm run dev -w @daas/remote-wealth\"",
+    "build": "npm run build -w @daas/remote-auth && npm run build -w @daas/remote-dashboard && npm run build -w @daas/remote-payments && npm run build -w @daas/remote-wealth && npm run build -w @daas/remote-accounts && npm run build -w @daas/host",
+    "preview": "concurrently -n host,auth,dash,pay,wlth,accts -c cyan,magenta,green,yellow,blue,red \"npm run preview -w @daas/host\" \"npm run preview -w @daas/remote-auth\" \"npm run preview -w @daas/remote-dashboard\" \"npm run preview -w @daas/remote-payments\" \"npm run preview -w @daas/remote-wealth\" \"npm run preview -w @daas/remote-accounts\"",
+    "install:dbs": "npm install @dbs/webstudio-hub-athena-daas@latest --workspace @daas/host --save-optional || echo \"[install:dbs] SDK unavailable (public registry 404) - skipped, project still compiles\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

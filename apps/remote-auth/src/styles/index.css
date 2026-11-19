@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Shared digiBank theme tokens (mirrors the host palette). */
+/* 共享的 digiBank 主题令牌（与 host 调色板一致）。 */
+@theme {
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1d1b4d;
+
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+
+  --color-nav-800: #1e1b4b;
+  --color-nav-900: #141238;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+}

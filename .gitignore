@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+apps/*/dist/
+apps/*/build/
+
+# Generated module-federation types
+@mf-types*
+
+# Environment / secrets — never commit real keys
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
